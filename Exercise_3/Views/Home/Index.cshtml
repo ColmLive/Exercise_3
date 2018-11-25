@@ -39,7 +39,7 @@
 				@Html.DropDownListFor(m => m.VehicleTag, new List<SelectListItem>
 			   { new SelectListItem{Text="Yes", Value="Y"},
 				 new SelectListItem{Text="No", Value="N"}}, "Please select")
-		
+				@Html.DisplayFor(m => m.VehicleTag)
 			</td>
 		</tr>
 		<tr>

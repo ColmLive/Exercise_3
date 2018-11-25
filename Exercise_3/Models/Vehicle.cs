@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Exercise_3.Models
 {
     public enum Category { Car,PSV,Bus,Goods }
-    public enum Tag { Yes, No }
+    public enum Tag { No, Yes}
     public class Vehicle
     {
         [Display(Name="Type")]

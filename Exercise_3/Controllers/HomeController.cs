@@ -14,8 +14,6 @@ namespace Exercise_3.Controllers
         {
            var vehicle = new Vehicle();
 //          var viewResult = new ViewResult();
-           
-
 //            ViewData["Vehicle"] = vehicle;
 
             return View();
@@ -24,23 +22,33 @@ namespace Exercise_3.Controllers
         public ActionResult Index(Vehicle vehicle)
         {
             //var vehicle = new Vehicle();
-                       
+            double vehiclecost = 0;
+            double vehicledisccost = 0;
             string vehicletype = vehicle.VehicleType;
             string vehiclecategory = vehicle.VehicleCategory.ToString();
             string vehicletag = vehicle.VehicleTag.ToString();
-            double vehiclecost = 0;
             if ((vehicletag == "No") && (vehiclecategory == "Car"))
-            { vehicle.VehicleCost = 2.00; }
+            {
+                vehicle.VehicleCost = 2.00;
+                vehicle.VehicleDiscCost = 2.00;
+            }
             if ((vehicletag == "No") && (vehiclecategory == "Bus"))
-            { vehicle.VehicleCost = 2.80; }
+            {
+                vehicle.VehicleCost = 2.80;
+                vehicle.VehicleDiscCost = 2.80;
+            }
             if ((vehicletag == "Yes") && (vehiclecategory == "Car"))
-            { vehicle.VehicleCost = 2.00;
-              vehicle.VehicleDiscCost = 2.00/100*80; }
+            {
+                vehicle.VehicleCost = 2.00;
+                vehicle.VehicleDiscCost = 2.00/100*80;
+            }
             if ((vehicletag == "Yes") && (vehiclecategory == "Bus"))
-            { vehicle.VehicleCost = 2.80;
-              vehicle.VehicleDiscCost = 2.80/100*80; }
+            {
+                vehicle.VehicleCost = 2.80;
+                vehicle.VehicleDiscCost = 2.80/100*80;
+            }
                        
-            //double vehiclecost = vehicle.VehicleCost;
+            vehiclecost = vehicle.VehicleCost;
 
             ViewData["Vehicle"] = vehicle;
 
