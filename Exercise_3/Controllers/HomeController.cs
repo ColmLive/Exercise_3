@@ -39,9 +39,7 @@ namespace Exercise_3.Controllers
             if ((vehicletag == "Yes") && (vehiclecategory == "Bus"))
             { vehicle.VehicleCost = 2.80;
               vehicle.VehicleDiscCost = 2.80/100*80; }
-
-
-
+                       
             //double vehiclecost = vehicle.VehicleCost;
 
             ViewData["Vehicle"] = vehicle;
